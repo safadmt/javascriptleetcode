@@ -1,0 +1,27 @@
+<script>
+
+    function expect(value) {
+        let obj = {
+            toBe: (val)=> {
+                if(value === val) {
+                    return {"value":true};
+                }else {
+                   return {"error": "Not Equal"}
+                }
+            },
+
+            notToBe: (val)=> {
+                if(value !== val) {
+                    return {"value":true};
+                }else{
+                    return {"error": "Equal"}
+                }
+            }
+        }
+        return obj;
+    }
+    console.log(expect(5).notToBe(4))
+    console.log(expect(5).toBe(5));
+    console.log(expect(5).toBe(4))
+    
+</script>

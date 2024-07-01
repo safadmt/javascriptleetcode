@@ -1,0 +1,15 @@
+<script>
+    var createCounter = (n)=> {
+        let count = 1
+        n = n - 1
+        
+        return ()=> {
+            return n +=  count;
+        }
+    }
+    
+    let f = createCounter(-2)
+    console.log(f());
+    console.log(f());
+    console.log(f());
+</script>
